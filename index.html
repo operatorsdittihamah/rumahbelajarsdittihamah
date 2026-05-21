@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rumah Belajar SDIT Tihamah</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7f5;
+color:#222;
+}
+
+/* HEADER */
+header{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:18px 60px;
+background:#fff;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#16813c;
+text-align:center;
+}
+
+/* HERO */
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px;
+background:linear-gradient(90deg,#d9f4df,#eaf6ff);
+min-height:500px;
+gap:30px;
+}
+
+.hero-text{
+max-width:50%;
+}
+
+.hero-text h1{
+font-size:55px;
+line-height:1.2;
+margin-bottom:15px;
+}
+
+.hero-text h1 span{
+color:#16813c;
+}
+
+.hero-text p{
+font-size:20px;
+margin-bottom:25px;
+color:#555;
+}
+
+.btns{
+display:flex;
+gap:15px;
+}
+
+.btn{
+padding:14px 28px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+transition:.3s;
+}
+
+.primary{
+background:#16813c;
+color:white;
+}
+
+.secondary{
+background:white;
+border:2px solid #16813c;
+color:#16813c;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+/* HERO IMAGE */
+.hero-image img{
+width:100%;
+max-width:550px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* SUBJECT */
+.subjects{
+padding:60px;
+}
+
+.subjects h2{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* CARD */
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.35s;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 28px rgba(0,0,0,.15);
+}
+
+/* ICON */
+.icon img{
+width:180px;
+height:180px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+/* TITLE */
+.card h3{
+font-size:30px;
+margin-bottom:15px;
+color:#16813c;
+cursor:pointer;
+transition:.3s;
+}
+
+.card h3:hover{
+color:#0f5d2b;
+}
+
+/* DROPDOWN */
+.dropdown-content{
+display:none;
+margin-top:10px;
+animation:fade .3s ease;
+}
+
+.dropdown-content a{
+display:block;
+padding:12px;
+margin:8px 0;
+background:#f5f7f5;
+border-radius:12px;
+text-decoration:none;
+font-size:15px;
+font-weight:500;
+color:#333;
+transition:.3s;
+}
+
+.dropdown-content a:hover{
+background:#16813c;
+color:white;
+transform:translateX(5px);
+}
+
+/* FOOTER */
+.footer{
+background:#16813c;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+font-size:15px;
+}
+
+/* ANIMATION */
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(-10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text{
+max-width:100%;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+header{
+padding:18px 25px;
+}
+
+.logo{
+font-size:20px;
+}
+
+.card h3{
+font-size:24px;
+}
+
+.icon img{
+width:140px;
+height:140px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+Whatever You Learn, Please Make Your Intention In The Shake Of Allah SWT.
+</div>
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+Selamat Datang di 
+<span>Rumah Belajar SDIT Tihamah</span>
+</h1>
+
+<p>
+Belajar jadi lebih mudah, menyenangkan dan bermanfaat bersama SDIT Tihamah.
+</p>
+
+<div class="btns">
+
+<button class="btn primary"
+onclick="window.location.href='test.html'">
+📝 Materi Pelajaran
+</button>
+
+<button class="btn secondary"
+onclick="window.location.href='video.html'">
+▶ Video Pembelajaran
+</button>
+
+</div>
+</div>
+
+<div class="hero-image">
+<img src="pn.png" alt="SDIT Tihamah">
+</div>
+
+</section>
+
+<section class="subjects">
+
+<h2>Ikuti Test CBT SDIT Tihamah</h2>
+
+<div class="grid">
+
+<!-- CARD 1 -->
+<div class="card">
+
+<div class="icon">
+<img src="ba.png" alt="Bahasa Inggris">
+</div>
+
+<h3 onclick="toggleDropdown(this)">
+Bahasa Arab ▼
+</h3>
+
+<div class="dropdown-content">
+
+<a href="inggris-bab1.html">
+Bab 1 - Belum Tersedia
+</a>
+
+<a href="inggris-bab2.html">
+Bab 2 - Belum Tersedia
+</a>
+
+<a href="inggris-bab3.html">
+Bab 3 - Belum Tersedia
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CARD 2 -->
+<div class="card">
+
+<div class="icon">
+<img src="mkt.png" alt="Matematika">
+</div>
+
+<h3 onclick="toggleDropdown(this)">
+Matematika ▼
+</h3>
+
+<div class="dropdown-content">
+
+<a href="https://operatorsdittihamah.github.io/1MTKKELAS5/">
+Bab 1 - Soal ASAT Matematika Kelas 5
+</a>
+
+<a href="mtk-bab2.html">
+Bab 2 - Belum Tersedia
+</a>
+
+<a href="mtk-bab3.html">
+Bab 3 - Belum Tersedia
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CARD 3 -->
+<div class="card">
+
+<div class="icon">
+<img src="ipas.png" alt="IPA">
+</div>
+
+<h3 onclick="toggleDropdown(this)">
+IPA ▼
+</h3>
+
+<div class="dropdown-content">
+
+<a href="ipa-bab1.html">
+Bab 1 - Belum Tersedia
+</a>
+
+<a href="ipa-bab2.html">
+Bab 2 - Belum Tersedia
+</a>
+
+<a href="Bahasa Inggris-bab3.html">
+Bab 3 - Belum Tersedia
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CARD 4 -->
+<div class="card">
+
+<div class="icon">
+<img src="inggris.png" alt="IPS">
+</div>
+
+<h3 onclick="toggleDropdown(this)">
+Bahasa Inggris ▼
+</h3>
+
+<div class="dropdown-content">
+
+<a href="https://operatorsdittihamah.github.io/1BAHASAINGGRISKELAS5/">
+Bab 1 - Soal ASAT B. Inggris Kelas 5
+</a>
+
+<a href="ips-bab2.html">
+Bab 2 - Belum Tersedia
+</a>
+
+<a href="ips-bab3.html">
+Bab 3 - Belum Tersedia
+</a>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<div class="footer">
+Belajarlah hari ini untuk masa depan yang lebih baik ✨
+</div>
+
+<script>
+
+function toggleDropdown(element){
+
+const dropdown =
+element.nextElementSibling;
+
+if(dropdown.style.display === "block"){
+
+dropdown.style.display = "none";
+
+}else{
+
+dropdown.style.display = "block";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
