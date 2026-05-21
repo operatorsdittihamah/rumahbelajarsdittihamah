@@ -19,9 +19,14 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#f5f7f5;
 color:#222;
+overflow-x:hidden;
 }
 
 /* HEADER */
@@ -29,19 +34,21 @@ header{
 display:flex;
 justify-content:center;
 align-items:center;
-padding:18px 60px;
+padding:18px 25px;
 background:#fff;
 box-shadow:0 3px 10px rgba(0,0,0,.08);
 position:sticky;
 top:0;
 z-index:1000;
+text-align:center;
 }
 
 .logo{
-font-size:28px;
+font-size:22px;
 font-weight:700;
 color:#16813c;
-text-align:center;
+line-height:1.5;
+max-width:1200px;
 }
 
 /* HERO */
@@ -49,20 +56,22 @@ text-align:center;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:60px;
+padding:60px 7%;
 background:linear-gradient(90deg,#d9f4df,#eaf6ff);
 min-height:500px;
-gap:30px;
+gap:40px;
+flex-wrap:wrap;
 }
 
 .hero-text{
-max-width:50%;
+flex:1;
+min-width:300px;
 }
 
 .hero-text h1{
 font-size:55px;
 line-height:1.2;
-margin-bottom:15px;
+margin-bottom:18px;
 }
 
 .hero-text h1 span{
@@ -71,13 +80,16 @@ color:#16813c;
 
 .hero-text p{
 font-size:20px;
-margin-bottom:25px;
+margin-bottom:30px;
 color:#555;
+line-height:1.7;
 }
 
+/* BUTTON */
 .btns{
 display:flex;
 gap:15px;
+flex-wrap:wrap;
 }
 
 .btn{
@@ -107,27 +119,36 @@ box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
 /* HERO IMAGE */
+.hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+min-width:280px;
+}
+
 .hero-image img{
 width:100%;
-max-width:550px;
+max-width:500px;
 border-radius:20px;
 box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 /* SUBJECT */
 .subjects{
-padding:60px;
+padding:70px 7%;
 }
 
 .subjects h2{
 text-align:center;
-font-size:40px;
-margin-bottom:40px;
+font-size:42px;
+margin-bottom:45px;
+color:#16813c;
 }
 
+/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
@@ -150,15 +171,15 @@ box-shadow:0 12px 28px rgba(0,0,0,.15);
 
 /* ICON */
 .icon img{
-width:180px;
-height:180px;
+width:160px;
+height:160px;
 object-fit:contain;
-margin-bottom:10px;
+margin-bottom:15px;
 }
 
 /* TITLE */
 .card h3{
-font-size:30px;
+font-size:28px;
 margin-bottom:15px;
 color:#16813c;
 cursor:pointer;
@@ -187,6 +208,7 @@ font-size:15px;
 font-weight:500;
 color:#333;
 transition:.3s;
+word-break:break-word;
 }
 
 .dropdown-content a:hover{
@@ -200,7 +222,7 @@ transform:translateX(5px);
 background:#16813c;
 color:white;
 text-align:center;
-padding:20px;
+padding:22px;
 margin-top:30px;
 font-size:15px;
 }
@@ -217,12 +239,48 @@ transform:translateY(0);
 }
 }
 
-/* RESPONSIVE */
-@media(max-width:900px){
+/* =========================
+TABLET
+========================= */
+@media(max-width:992px){
 
 .hero{
-flex-direction:column;
+padding:50px 5%;
+}
+
+.hero-text h1{
+font-size:42px;
+}
+
+.subjects h2{
+font-size:34px;
+}
+
+.logo{
+font-size:19px;
+}
+
+}
+
+/* =========================
+HP ANDROID
+========================= */
+@media(max-width:768px){
+
+header{
+padding:15px;
+}
+
+.logo{
+font-size:16px;
+line-height:1.6;
+}
+
+.hero{
+flex-direction:column-reverse;
 text-align:center;
+padding:40px 5%;
+min-height:auto;
 }
 
 .hero-text{
@@ -230,15 +288,42 @@ max-width:100%;
 }
 
 .hero-text h1{
-font-size:40px;
+font-size:34px;
 }
 
-header{
-padding:18px 25px;
+.hero-text p{
+font-size:16px;
 }
 
-.logo{
-font-size:20px;
+.btns{
+justify-content:center;
+}
+
+.btn{
+width:100%;
+max-width:320px;
+font-size:15px;
+}
+
+.hero-image img{
+max-width:320px;
+}
+
+.subjects{
+padding:50px 5%;
+}
+
+.subjects h2{
+font-size:28px;
+line-height:1.4;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.card{
+padding:20px;
 }
 
 .card h3{
@@ -246,8 +331,43 @@ font-size:24px;
 }
 
 .icon img{
-width:140px;
-height:140px;
+width:120px;
+height:120px;
+}
+
+.dropdown-content a{
+font-size:14px;
+padding:11px;
+}
+
+.footer{
+font-size:14px;
+padding:18px;
+}
+
+}
+
+/* HP KECIL */
+@media(max-width:480px){
+
+.hero-text h1{
+font-size:28px;
+}
+
+.hero-text p{
+font-size:15px;
+}
+
+.logo{
+font-size:14px;
+}
+
+.subjects h2{
+font-size:24px;
+}
+
+.card h3{
+font-size:22px;
 }
 
 }
@@ -259,7 +379,7 @@ height:140px;
 
 <header>
 <div class="logo">
-Whatever You Learn, Please Make Your Intention In The Shake Of Allah SWT.
+Whatever You Learn, Please Make Your Intention In The Sake Of Allah SWT.
 </div>
 </header>
 
@@ -307,7 +427,7 @@ onclick="window.location.href='video.html'">
 <div class="card">
 
 <div class="icon">
-<img src="ba.png" alt="Bahasa Inggris">
+<img src="ba.png" alt="Bahasa Arab">
 </div>
 
 <h3 onclick="toggleDropdown(this)">
@@ -331,7 +451,6 @@ Bab 3 - Belum Tersedia
 </div>
 
 </div>
-
 
 <!-- CARD 2 -->
 <div class="card">
@@ -362,7 +481,6 @@ Bab 3 - Belum Tersedia
 
 </div>
 
-
 <!-- CARD 3 -->
 <div class="card">
 
@@ -384,7 +502,7 @@ Bab 1 - Belum Tersedia
 Bab 2 - Belum Tersedia
 </a>
 
-<a href="Bahasa Inggris-bab3.html">
+<a href="ipa-bab3.html">
 Bab 3 - Belum Tersedia
 </a>
 
@@ -392,12 +510,11 @@ Bab 3 - Belum Tersedia
 
 </div>
 
-
 <!-- CARD 4 -->
 <div class="card">
 
 <div class="icon">
-<img src="inggris.png" alt="IPS">
+<img src="inggris.png" alt="Bahasa Inggris">
 </div>
 
 <h3 onclick="toggleDropdown(this)">
@@ -433,14 +550,17 @@ Belajarlah hari ini untuk masa depan yang lebih baik ✨
 
 function toggleDropdown(element){
 
-const dropdown =
-element.nextElementSibling;
+const dropdown = element.nextElementSibling;
 
 if(dropdown.style.display === "block"){
 
 dropdown.style.display = "none";
 
 }else{
+
+document.querySelectorAll('.dropdown-content').forEach(item=>{
+item.style.display = "none";
+});
 
 dropdown.style.display = "block";
 
